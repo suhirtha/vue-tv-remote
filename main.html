@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue js Tv</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-slider.min.css">
+</head>
+<body>
+	<div id="whole-setup">
+		<div id="tv">
+			<div class="inner-tv">
+				<transition name="fade">
+				    <div v-if="show" class="tv"></div>
+				    <div v-show="ok" class="prog">
+				    	<ul class="grid">
+				    		<li v-for="a in programs">
+				    			<a v-on:click = "counter = a.counter">{{a.name}}</a>
+				    		</li>
+				    	</ul>
+				    </div>
+				</transition>
+				<transition name="fade">
+					<div v-if="showChannel" class="channel"><p>{{counter}}</p></div>
+				</transition>
+				<transition name="fade">
+					<div v-show = "notok" class="volume"></div>
+				</transition>
+				<transition name="fade">
+					<div v-show = "showSettings" class="settings" >
+						<li>
+							<label>Brightness</label>
+							<input type="text" id="bright-slide">
+						</li>
+						<li>
+							<label>Contrast</label>
+							<input type="text" id="contrast-slide">
+						</li>
+						<li>
+							<label>Color</label>
+							<input type="text" id="color-slide">
+						</li>
+					</div>
+				</transition>
+				<transition name="fade">
+				<video id ="video" v-for="a in programs">
+		            <source v-bind:src="a.src" type="video/mp4">
+		        </video>
+			</transition>
+				
+			</div>
+		</div>
+
+
+		<div id="remote" class="remote">
+		<div class="power" v-on:click="switchOn" onclick="playPause()">
+            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+        </div>
+        <div class="prog-up" v-on:click= "counter+= 1">
+            <span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>
+        </div>
+        <div class="prog-down" v-on:click= "counter-= 1">
+            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+        </div> 
+        <div class="vol-up" v-on:click="notok = true">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        </div>
+        <div class="vol-down" v-on:click="notok = true">
+            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+        </div>
+        <div class="all-prog" v-on:click="ok = !ok">
+            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+        </div>
+        <div class="setting" v-on:click="showSettings =!showSettings">
+            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+        </div>
+		</div>
+	</div>
+  
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-slider.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/self-inc.js"></script>
+</body>
+</html>

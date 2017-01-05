@@ -1,0 +1,145 @@
+/*       Tv        */
+
+#video{
+    height:230px;
+    width: 380px;
+}
+#tv {
+    height: 250px;
+    width: 400px;
+    position: relative;
+    margin: 0 auto;
+    background-color: #3a3a3a;
+}
+
+.inner-tv {
+    height: 230px;
+    width: 380px;
+    background-color: #fff;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    overflow: hidden;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .1s
+}
+
+.fade-enter,
+.fade-leave-active {
+    opacity: 0
+}
+
+.tv {
+    background-color: #000;
+    height: 230px;
+    width: 380px;
+}
+
+.channel {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 35px;
+    width: 35px;
+    color: blue;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.volume {
+    position: absolute;
+    bottom: 5px;
+    height: 10px;
+    width: 250px;
+    background-color: #0000ff;
+}
+
+.prog {
+    height: 230px;
+    max-width: 380px;
+    font-weight: solid;
+    background-color: rgba(148, 148, 184, 0.5);
+    overflow: hidden;
+}
+
+ul.grid {
+    list-style: none;
+    text-align: left;
+    padding: 0;
+    margin: 16px;
+}
+
+ul.grid li {
+    display: block;
+}
+
+ul.grid li a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #fff;
+    outline: none;
+}
+
+ul.grid li a:hover {
+    color: #000;
+}
+.settings {
+    height: 230px;
+    max-width: 380px;
+    color: #66a3ff;
+    background-color: rgba(148, 148, 184, 0.5);
+}
+
+.settings ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.settings li {
+    display: block;
+    padding: 1.3em;
+}
+
+
+
+/*        Remote          */
+
+.remote {
+    border: 5px solid #3a3a3a;
+    padding-top: 1x;
+    height: 400px;
+    width: 100px;
+    position: relative;
+    margin: 0 auto;
+    background-color: #000;
+    margin-top: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.prog-up,
+.prog-down,
+.vol-up,
+.vol-down,
+.setting,
+.all-prog,
+.power {
+    height: 40px;
+    width: 40px;
+    background-color: #3a3a3a;
+    border-radius: 100%;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.glyphicon {
+    height: 35px;
+    width: 35px;
+    color: white;
+    margin-left: 13px;
+    margin-top: 12px;
+}
