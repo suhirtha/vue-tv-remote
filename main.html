@@ -45,11 +45,18 @@
 					</div>
 				</transition>
 				<transition name="fade">
-				<video id ="video" v-for="a in programs">
-		            <source v-bind:src="a.src" type="video/mp4">
+				<video controls id ="video">
+		            <source v-if="counter===16" v-bind:src="obj16.src" type="video/mp4">
+		            <source v-else-if="counter===17" v-bind:src="obj17.src" type="video/mp4">
+		            <source v-else-if="counter===18" v-bind:src="obj18.src" type="video/mp4">
+		            <source v-else-if="counter===19" v-bind:src="obj19.src" type="video/mp4">
+		            <source v-else-if="counter===20" v-bind:src="obj20.src" type="video/mp4">
+		            <source v-else-if="counter===21" v-bind:src="obj21.src" type="video/mp4">
+		            <source v-else-if="counter===22" v-bind:src="obj22.src" type="video/mp4">
+		            <source v-else-if="counter===23" v-bind:src="obj23.src" type="video/mp4">
+		            <source v-else-if="counter===24" v-bind:src="obj24.src" type="video/mp4">
 		        </video>
 			</transition>
-				
 			</div>
 		</div>
 
@@ -78,7 +85,7 @@
         </div>
 		</div>
 	</div>
-  
+	
 <script src="js/vue.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
