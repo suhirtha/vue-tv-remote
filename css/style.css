@@ -1,9 +1,10 @@
 /*       Tv        */
 
-#video{
-    height:230px;
+#video {
+    height: 230px;
     width: 380px;
 }
+
 #tv {
     height: 250px;
     width: 400px;
@@ -86,6 +87,7 @@ ul.grid li a {
 ul.grid li a:hover {
     color: #000;
 }
+
 .settings {
     height: 230px;
     max-width: 380px;
@@ -103,7 +105,6 @@ ul.grid li a:hover {
     display: block;
     padding: 1.3em;
 }
-
 
 
 /*        Remote          */
